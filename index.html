@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Ramalan Cuaca</title>
 </head>
 <body>
     <div class="img-content"></div>
-    <div class="card">
+    <div class="card-content">
         <div class="search">
-            <input type="text" class="search-bar" placeholder="Enter City Name">
-            <button class="search-button"> <img src="assets/search.png" alt="" style="width: 30px;height: 30px; color: white;"></button>
+            <input type="text" class="search-bar rounded-pill input-keyword" placeholder="Enter City Name">
+            <button class="search-button rounded-circle mx-1"> <img src="assets/search.png" alt="" style="width: 30px;height: 30px; color: white;"></button>
         </div>
         <div class="weather loading"></div>
-        <h2 class="city"></h2>
+        <h2 class="city mt-1"></h2>
         <h1 class="temp"></h1>
         <div class="flex">
             <img src="" alt="" class="icon" />
@@ -26,4 +27,5 @@
     
 </body>
 <script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </html>
