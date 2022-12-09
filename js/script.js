@@ -4,10 +4,15 @@ let weather = {
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q=" 
             + city 
-            + "&appid=" 
+            + "&units=metric&appid=" 
             + this.apiKey
         )
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) {
+                alert("City not found");
+            }
+            return response.json();
+         })
         .then((data) => this.displayWeather(data));
     },
     displayWeather: function(data){
@@ -19,7 +24,7 @@ let weather = {
         document.querySelector(".city").innerHTML = name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"
         document.querySelector(".description").innerHTML = description ;
-        document.querySelector(".temp").innerHTML = temp + "C";
+        document.querySelector(".temp").innerHTML = temp + " C";
         document.querySelector(".speed").innerHTML = "Wind Speed : " + speed + " Km";
         document.querySelector(".weather").classList.remove("loading");
         document.querySelector(".img-content").style.backgroundImage =

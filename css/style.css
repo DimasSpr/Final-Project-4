@@ -23,7 +23,7 @@ body{
 p{
     font-size: 30px;
 }
-.card{
+.card-content{
     color: white;
     background: #251B37;
     padding: 2em;
@@ -36,7 +36,6 @@ input.search-bar{
     border: none;
     outline: none;
     padding: 0.4em 1em;
-    border-radius: 18px;
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
@@ -87,4 +86,61 @@ h1.temp{
     position: absolute;
     top: 0;
     left: 20px;
+}
+@media screen and (max-width:700px){
+    body{
+        display: grid;
+        margin: 50px;
+    }
+    .img-content{
+        width: 400px;
+        height: 200px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-content{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .city{
+        text-align: center;
+    }
+    .temp{
+        text-align: center;
+    }
+    .speed{
+        text-align: center;
+    }
+}
+@media screen and (max-width:500px){
+    body{
+        display: grid;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .img-content{
+        width: 90%;
+        height: 200px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-content{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ::placeholder{
+        font-size: 13px;
+    }
+    .city{
+        text-align: center;
+    }
+    .temp{
+        text-align: center;
+    }
+    .speed{
+        text-align: center;
+    }
 }
